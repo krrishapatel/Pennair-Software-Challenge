@@ -1,4 +1,4 @@
-# PennAiR Software Team Challenge 2024
+# PennAiR Software Team Challenge
 
 ## Overview
 The solution implements a computer vision algorithm for autonomous shape detection and landing zone identification, similar to the SAE Aero Design Competition requirements.
