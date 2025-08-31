@@ -1,11 +1,9 @@
 # PennAiR Software Team Challenge 2024
 
 ## Overview
-This repository contains a complete solution for the PennAiR Software Team Challenge 2024. The solution implements a computer vision algorithm for autonomous shape detection and landing zone identification, similar to the SAE Aero Design Competition requirements.
+The solution implements a computer vision algorithm for autonomous shape detection and landing zone identification, similar to the SAE Aero Design Competition requirements.
 
-## Challenge Parts Implemented
-
-### ✅ Part 1: Shape Detection on Static Image
+### Part 1: Shape Detection on Static Image
 - **Algorithm**: OpenCV-based shape detection using HSV color segmentation
 - **Features**: 
   - Detects solid shapes on grassy backgrounds
@@ -14,7 +12,7 @@ This repository contains a complete solution for the PennAiR Software Team Chall
   - Labels each shape with number and area information
 - **Usage**: `python simple_shape_detector.py --image "PennAir 2024 App Static.png" --output "static_result.png"`
 
-### ✅ Part 2: Shape Detection on Video
+### Part 2: Shape Detection on Video
 - **Algorithm**: Same detection algorithm applied frame-by-frame
 - **Features**:
   - Processes video as streamed input (frame-by-frame)
@@ -22,7 +20,7 @@ This repository contains a complete solution for the PennAiR Software Team Chall
   - Outputs processed video with detections drawn
 - **Usage**: `python simple_shape_detector.py --video "PennAir 2024 App Dynamic.mp4" --output "dynamic_result.mp4"`
 
-### ✅ Part 3: Background Agnostic Algorithm
+### Part 3: Background Agnostic Algorithm
 - **Algorithm**: Adaptive thresholding for various backgrounds
 - **Features**:
   - Works on different background colors and textures
@@ -30,7 +28,7 @@ This repository contains a complete solution for the PennAiR Software Team Chall
   - Tested on challenging backgrounds
 - **Usage**: `python background_agnostic.py --video "PennAir 2024 App Dynamic Hard.mp4" --output "hard_result.mp4"`
 
-### ✅ Part 4: 3D Coordinate Estimation
+### Part 4: 3D Coordinate Estimation
 - **Algorithm**: Perspective geometry using camera intrinsics
 - **Features**:
   - Calculates depth, X, and Y coordinates w.r.t camera
@@ -39,7 +37,7 @@ This repository contains a complete solution for the PennAiR Software Team Chall
   - Assumes flat surface for simplicity
 - **Usage**: `python shape_detector_3d.py --video "PennAir 2024 App Dynamic.mp4" --output "3d_result.mp4"`
 
-### ✅ Part 5: ROS2 Integration
+### Part 5: ROS2 Integration
 - **Node 1**: Video Streamer Node (`video_streamer_node.py`)
   - Streams input video as images on `camera_image` topic
 - **Node 2**: Shape Detection Node (`shape_detector_node.py`)
@@ -57,7 +55,7 @@ This repository contains a complete solution for the PennAiR Software Team Chall
   ros2 topic echo /processed_image
   ```
 
-### ✅ Part 6: Additional Enhancements
+### Part 6: Additional Enhancements
 - **Object Tracking**: Basic distance-based tracking between frames
 - **Performance Optimization**: Efficient frame processing
 - **Robust Detection**: Handles various lighting conditions
@@ -141,25 +139,25 @@ ros2 launch pennair_vision launch.py video_path:=/path/to/video.mp4
 ## Deliverables
 
 ### Code Implementation
-- ✅ Complete source code for all 6 parts
-- ✅ Well-documented with clear comments
-- ✅ Modular design for easy extension
+- Complete source code for all 6 parts
+- Well-documented with clear comments
+- Modular design for easy extension
 
 ### Static Image Results
-- ✅ Processed image showing detected shapes
-- ✅ Outlines traced in green
-- ✅ Centers marked with red circles
-- ✅ Shape labels and area information
+- Processed image showing detected shapes
+- Outlines traced in green
+- Centers marked with red circles
+- Shape labels and area information
 
 ### Video Results
-- ✅ Screen recording of algorithm performance
-- ✅ Consistent detection throughout video
-- ✅ Real-time processing capabilities
+- Screen recording of algorithm performance
+- Consistent detection throughout video
+- Real-time processing capabilities
 
 ### Background Agnostic Results
-- ✅ Processed video on challenging backgrounds
-- ✅ Maintained detection accuracy
-- ✅ Adaptive algorithm performance
+- Processed video on challenging backgrounds
+- Maintained detection accuracy
+- Adaptive algorithm performance
 
 ## Performance
 - **Processing Speed**: 30+ FPS on standard hardware
@@ -178,20 +176,3 @@ The solution has been tested with the provided PennAiR test files:
 - Multi-camera fusion for 3D reconstruction
 - Real-time trajectory planning
 - Advanced filtering for dynamic environments
-
-## Contributing
-This project was developed for the PennAiR Software Team application. For questions or improvements, please contact the development team.
-
-## License
-This project is developed for educational and competition purposes.
-
----
-
-## Submission Information
-- **Repository**: Public GitHub repository
-- **Code Quality**: Clean, documented, and organized
-- **Functionality**: All 6 parts implemented and tested
-- **Innovation**: Simple but effective approach to complex problem
-- **Learning Potential**: Easy to understand and extend
-
-**Ready for PennAiR Software Team evaluation! 🚁✈️**
